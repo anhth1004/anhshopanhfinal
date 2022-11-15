@@ -1,0 +1,61 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="hero">
+        <nav>
+            <div class=><a href=>ATN-SHOP</a></div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <img src="https://th.bing.com/th/id/OIP.4J8yA-cLfqlfIj3emzP_VwHaHa?pid=ImgDet&rs=1" class="user-pic" onclick="toggleMenu()">
+
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="https://free.vector6.com/wp-content/uploads/2020/09/Free-vector-000234-nen-halloween-voi-co-be-phu-thuy-de-thuong-va-chu-meo-con-dang-bay-tren-cay-choi.jpg">
+                        <h2><%= name %></h2>
+                    </div>
+                    <hr>
+                    <a href="#" class="sub-menu-link">
+                        <img src="https://free.vector6.com/wp-content/uploads/2020/09/Free-vector-000234-nen-halloween-voi-co-be-phu-thuy-de-thuong-va-chu-meo-con-dang-bay-tren-cay-choi.jpg">
+                        <p>Edit Profile</p>
+                         <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="https://free.vector6.com/wp-content/uploads/2020/09/Free-vector-000234-nen-halloween-voi-co-be-phu-thuy-de-thuong-va-chu-meo-con-dang-bay-tren-cay-choi.jpg">
+                        <p>Setting & Privacy</p>
+                         <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="https://free.vector6.com/wp-content/uploads/2020/09/Free-vector-000234-nen-halloween-voi-co-be-phu-thuy-de-thuong-va-chu-meo-con-dang-bay-tren-cay-choi.jpg">
+                        <p>Help & Support</p>
+                         <span>></span>
+                    </a>
+                    <a href="https://firstexpress-gcd.herokuapp.com/" class="sub-menu-link">
+                        <img src="https://free.vector6.com/wp-content/uploads/2020/09/Free-vector-000234-nen-halloween-voi-co-be-phu-thuy-de-thuong-va-chu-meo-con-dang-bay-tren-cay-choi.jpg">
+                        <p>Logout</p>
+                         <span>></span>
+                    </a>
+                </div>
+            </div>
+        </nav>     
+            <div class="table">
+            <%- table_string %>
+          </div>        
+    </div> 
+  </body>
+  <script>
+    let subMenu = document.getElementById("subMenu");
+    function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+    }
+</script>
+</html>
